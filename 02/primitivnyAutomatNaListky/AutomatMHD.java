@@ -76,4 +76,10 @@ public class AutomatMHD {
         // nuluj vlozenu ciastku
         this.vlozenaCiastka = 0;
     }
+    
+    public int vratTrzbu() {
+        int odlozenaTrzba = this.trzba;
+        this.trzba = 0;
+        return odlozenaTrzba;
+    }
 }
