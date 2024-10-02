@@ -35,6 +35,13 @@ public class AutomatMHD {
     }
     
     /**
+     * Zmeni cenu listka (napr. v dosledku inflacie)
+     */
+    public void nastavCenuListka(int novaCenaListka) {
+        this.cenaListka = novaCenaListka;
+    }
+    
+    /**
      * Vrati doteraz vlozenu ciastku
      */
     public int getVlozenaCiastka() {
