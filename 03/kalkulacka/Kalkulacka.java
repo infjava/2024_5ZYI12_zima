@@ -36,8 +36,14 @@ public class Kalkulacka {
     
     public void mocnina(int exponent) {
         double medzivysledok = 1;
-        for (int i = 0; i < exponent; i++) {
-            medzivysledok *= this.vysledok;
+        if (exponent >= 0) {
+            for (int i = 0; i < exponent; i++) {
+                medzivysledok *= this.vysledok;
+            }
+        } else {
+            for (int i = 0; i < -exponent; i++) {
+                medzivysledok /= this.vysledok;
+            }
         }
         this.vysledok = medzivysledok;
     }
