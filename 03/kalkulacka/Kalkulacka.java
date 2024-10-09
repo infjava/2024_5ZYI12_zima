@@ -1,33 +1,47 @@
 public class Kalkulacka {
     private double vysledok;
+    private char operator;
     
     public Kalkulacka() {
         this.vysledok = 0;
+        this.operator = '+';
     }
     
     public void zadaj(double hodnota) {
-        this.vysledok = hodnota;
-    }
-    
-    public void plus(double hodnota) {
-        // this.vysledok = this.vysledok + hodnota;
-        this.vysledok += hodnota;
-    }
-    
-    public void minus(double hodnota) {
-        this.vysledok -= hodnota;
-    }
-    
-    public void krat(double hodnota) {
-        this.vysledok *= hodnota;
-    }
-    
-    public void deleno(double hodnota) {
-        if (hodnota != 0) {
-            this.vysledok /= hodnota;
-        } else {
-            System.out.println("Cannot divide by zero");
+        switch (this.operator) {
+            case '+':
+                this.vysledok += hodnota;
+                break;
+            case '-':
+                this.vysledok -= hodnota;
+                break;
+            case '*':
+                this.vysledok *= hodnota;
+                break;
+            case '/':
+                if (hodnota == 0) {
+                    System.out.println("Cannot divide by zero");
+                } else {
+                    this.vysledok /= hodnota;
+                }
+                break;
         }
+    }
+    
+    public void plus() {
+        this.operator = '+';
+    }
+    
+    public void minus() {
+        this.operator = '-';
+    }
+    
+    public void krat() {
+        this.operator = '*';
+    }
+    
+    public void deleno() {
+        this.operator = '/';
     }
     
     public void druhaMocnina() {
