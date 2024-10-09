@@ -48,6 +48,21 @@ public class Kalkulacka {
         this.vysledok = medzivysledok;
     }
     
+    public void druhaOdmocnina() {
+        double medzivysledok = this.vysledok;
+        double predchadzajuciMedzivysledok;
+        
+        //int i = 0;
+        do {
+            predchadzajuciMedzivysledok = medzivysledok;
+            medzivysledok = (medzivysledok + this.vysledok / medzivysledok) / 2;
+            //i++;
+        } while ((predchadzajuciMedzivysledok - medzivysledok) > 0.00000000000000001);
+        //System.out.println(i);
+        
+        this.vysledok = medzivysledok;
+    }
+    
     public double getVysledok() {
         return this.vysledok;
     }
