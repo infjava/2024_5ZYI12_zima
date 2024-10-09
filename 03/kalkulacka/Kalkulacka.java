@@ -23,7 +23,11 @@ public class Kalkulacka {
     }
     
     public void deleno(double hodnota) {
-        this.vysledok /= hodnota;
+        if (hodnota != 0) {
+            this.vysledok /= hodnota;
+        } else {
+            System.out.println("Cannot divide by zero");
+        }
     }
     
     public double getVysledok() {
