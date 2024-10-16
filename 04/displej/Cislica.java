@@ -7,14 +7,14 @@ public class Cislica {
     private Segment segmentF;
     private Segment segmentG;
     
-    public Cislica() {
-        this.segmentA = new Segment(10, 0, false);
-        this.segmentB = new Segment(60, 10, true);
-        this.segmentC = new Segment(60, 70, true);
-        this.segmentD = new Segment(10, 120, false);
-        this.segmentE = new Segment(0, 70, true);
-        this.segmentF = new Segment(0, 10, true);
-        this.segmentG = new Segment(10, 60, false);
+    public Cislica(int x, int y) {
+        this.segmentA = new Segment(10 + x, y, false);
+        this.segmentB = new Segment(60 + x, 10 + y, true);
+        this.segmentC = new Segment(60 + x, 70 + y, true);
+        this.segmentD = new Segment(10 + x, 120 + y, false);
+        this.segmentE = new Segment(x, 70 + y, true);
+        this.segmentF = new Segment(x, 10 + y, true);
+        this.segmentG = new Segment(10 + x, 60 + y, false);
     }
     
     public void nastavCislo(char cislo) {
