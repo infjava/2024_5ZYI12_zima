@@ -12,15 +12,13 @@ public class Segment {
         } else {
             this.segment.zmenStrany(50, 10);
         }
-        
-        this.segment.zobraz();
     }
     
     public void zasviet() {
-        
+        this.segment.zobraz();
     }
     
     public void zhasni() {
-        
+        this.segment.skry();
     }
 }
