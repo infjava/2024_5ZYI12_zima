@@ -133,6 +133,7 @@ public class Kalkulacka {
             case "+":
             case "plus":
                 this.pripocitaj(cislo);
+                break;
             case "-":
             case "minus":
                 this.odpocitaj(cislo);
