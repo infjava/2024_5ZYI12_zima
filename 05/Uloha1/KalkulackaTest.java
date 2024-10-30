@@ -20,4 +20,12 @@ public class KalkulackaTest {
     public void setUp() {
         
     }
+    
+    @Test
+    public void spocitaj5a3() {
+        Kalkulacka kalkulacka = new Kalkulacka();
+        kalkulacka.zadajCislo(5);
+        kalkulacka.vypocitaj("+", 3);
+        Assert.assertEquals(8, kalkulacka.getVysledok(), 0.001);
+    }
 }
