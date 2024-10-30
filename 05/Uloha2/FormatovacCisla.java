@@ -34,8 +34,8 @@ public class FormatovacCisla {
      * @return Formatovane cislo s danym poctom desatinnych miest.
      */
     public String getCislo(int pocetDesatinnychMiest) {
-        // TODO Doprogramujte:
-        return "";       
+        String format = "%." + pocetDesatinnychMiest + "f";
+        return String.format(format, this.cislo);
     }
     
     /**
@@ -43,7 +43,7 @@ public class FormatovacCisla {
      * @param pocetDesatinnychMiest Pocet desatinnych miest.
      */
     public void vypisCislo(int pocetDesatinnychMiest) {
-        // TODO Doprogramujte:
+        System.out.println(this.getCislo(pocetDesatinnychMiest));
     }
     
     /**
