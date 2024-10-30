@@ -28,4 +28,13 @@ public class KalkulackaTest {
         kalkulacka.vypocitaj("+", 3);
         Assert.assertEquals(8, kalkulacka.getVysledok(), 0.001);
     }
+
+    @Test
+    public void odpocitaj5minus3() {
+        Kalkulacka kalkulacka = new Kalkulacka();
+        kalkulacka.zadajCislo(5);
+        kalkulacka.vypocitaj("-", 3);
+        Assert.assertEquals(2, kalkulacka.getVysledok(), 0.001);
+    }
 }
+
