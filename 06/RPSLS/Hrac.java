@@ -16,4 +16,8 @@ public class Hrac {
     public void posunDole() {
         this.ruka.predchadzajuceGesto();
     }
+    
+    public int getGesto() {
+        return this.ruka.getGesto();
+    }
 }

@@ -38,4 +38,8 @@ public class Ruka {
                 break;
         }
     }
+    
+    public int getGesto() {
+        return this.aktualneGesto;
+    }
 }

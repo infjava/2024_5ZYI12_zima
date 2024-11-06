@@ -19,4 +19,8 @@ public class Pocitac {
         
         this.ruka.setGesto(gesto);
     }
+    
+    public int getGesto() {
+        return this.ruka.getGesto();
+    }
 }
