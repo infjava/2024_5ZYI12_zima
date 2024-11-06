@@ -1,21 +1,25 @@
 public class Ruka {
     private Obrazok obrazokRuky;
+    private int aktualneGesto;
     
     public Ruka(int x, int y) {
         this.obrazokRuky = new Obrazok("pics/rock.png");
         this.obrazokRuky.zmenPolohu(x, y);
         this.obrazokRuky.zobraz();
+        this.aktualneGesto = 0;
     }
     
     public void nasledujuceGesto() {
-        
+        this.setGesto((this.aktualneGesto + 1) % 5);
     }
     
     public void predchadzajuceGesto() {
-        
+        this.setGesto((this.aktualneGesto + 4) % 5);
     }
     
     public void setGesto(int cislo) {
+        this.aktualneGesto = cislo;
+        
         switch (cislo) {
             case 0:
                 this.obrazokRuky.zmenObrazok("pics/rock.png");
