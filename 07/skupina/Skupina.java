@@ -1,10 +1,10 @@
+import java.util.ArrayList;
+
 public class Skupina {
-    // Tu by som chcel ZOZNAM osob (napriklad Vasu studijnu skupinu)
-    // Vopred ale neviem, kolko Vas je.
+    private ArrayList<Osoba> zoznamOsob;
         
     public Skupina() {
-        // Tu by sa mal ten zoznam vytvorit. 
-        // Doplnit!
+        this.zoznamOsob = new ArrayList<Osoba>();
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
