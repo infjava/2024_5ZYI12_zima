@@ -29,6 +29,17 @@ public class Skupina {
         }
     }
     
+    public void vypisClenovSkupinyBezDuplicit() {
+        ArrayList<Osoba> vypisaneOsoby = new ArrayList<Osoba>();
+        
+        for (Osoba osoba : this.zoznamOsob) {
+            if (!vypisaneOsoby.contains(osoba)) {
+                osoba.vypis();
+                vypisaneOsoby.add(osoba);
+            }
+        }
+    }
+    
     public void odstranPodlaPoradia(int poradie) {
         // Doplnit!
     }
