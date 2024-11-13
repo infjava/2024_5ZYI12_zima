@@ -26,13 +26,11 @@ public class Skupina {
     }
         
     public void vypisClenovSkupiny() {
-        if (!this.zoznamOsob.isEmpty()) {
-            int index = 0;
-            do {
-                this.zoznamOsob.get(index).vypis();
-                
-                index++;
-            } while (index < this.zoznamOsob.size());
+        int index = 0;
+        while (index < this.zoznamOsob.size()) {
+            this.zoznamOsob.get(index).vypis();
+            
+            index++;
         }
     }
     
