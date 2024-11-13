@@ -49,8 +49,6 @@ public class Skupina {
     }
     
     public void zrusSkupinu() {
-        while (!this.zoznamOsob.isEmpty()) {
-            this.zoznamOsob.remove(0);
-        }
+        this.zoznamOsob.clear();
     }
 }
