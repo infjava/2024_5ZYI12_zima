@@ -41,11 +41,11 @@ public class Skupina {
     }
     
     public void odstranPodlaPoradia(int poradie) {
-        // Doplnit!
+        this.zoznamOsob.remove(poradie);
     }
     
     public void odstranPodlaReferencie(Osoba osoba) {
-        // Doplnit!
+        this.zoznamOsob.remove(osoba);
     }
     
     public void zrusSkupinu() {
