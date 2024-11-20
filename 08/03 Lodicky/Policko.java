@@ -17,6 +17,7 @@ public class Policko {
     
     public void postavLodicku(Lodicka lodicka) {
         this.lodicka = lodicka;
+        this.lodicka.priradPolicko(this);
     }
     
     public void zasiahni() {
@@ -25,6 +26,16 @@ public class Policko {
             this.stvorec.zmenFarbu("#C0C0C0");
         } else {
             this.stvorec.zmenFarbu("red");
+            
+            this.lodicka.skontrolujZnicenie();
         }
+    }
+    
+    public boolean jeTrafene() {
+        return this.trafene;
+    }
+    
+    public void prefarbiNaCierno() {
+        this.stvorec.zmenFarbu("black");
     }
 }
