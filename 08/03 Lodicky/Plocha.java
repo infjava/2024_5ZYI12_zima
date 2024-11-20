@@ -33,6 +33,26 @@ public class Plocha {
         citacPlanu.close();
     }
     
+    public boolean obsahuje(int x, int y) {
+        if (x < 0) {
+            return false;
+        }
+        
+        if (y < 0) {
+            return false;
+        }
+        
+        if (x >= this.policka[0].length) {
+            return false;
+        }
+        
+        if (y >= this.policka.length) {
+            return false;
+        }
+        
+        return true;
+    }
+    
     public void zasiahni(int x, int y) {
         this.policka[y][x].zasiahni();
     }
