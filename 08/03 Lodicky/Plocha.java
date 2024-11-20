@@ -10,9 +10,14 @@ public class Plocha {
         
         int sirka = citacPlanu.nextInt();
         int vyska = citacPlanu.nextInt();
-        int pocetLodiek = citacPlanu.nextInt();
+        int pocetLodiciek = citacPlanu.nextInt();
         
         this.policka = new Policko[vyska][sirka];
+        
+        Lodicka[] lodicky = new Lodicka[pocetLodiciek];
+        for (int i = 0; i < pocetLodiciek; i++) {
+            lodicky[i] = new Lodicka();
+        }
         
         for (int y = 0; y < vyska; y++) {
             for (int x = 0; x < sirka; x++) {
@@ -20,7 +25,7 @@ public class Plocha {
                 
                 int policko = citacPlanu.nextInt();
                 if (policko != 0) {
-                    this.policka[y][x].postavLodicku(new Lodicka());
+                    this.policka[y][x].postavLodicku(lodicky[policko - 1]);
                 }
             }
         }
