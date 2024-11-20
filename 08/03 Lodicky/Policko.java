@@ -7,7 +7,7 @@ public class Policko {
     
     public Policko(int x, int y) {
         this.stvorec = new Stvorec(x * 20, y * 20);
-        this.stvorec.zmenStranu(20);
+        this.stvorec.zmenStranu(19);
         this.stvorec.zmenFarbu("blue");
         this.stvorec.zobraz();
         
