@@ -32,4 +32,8 @@ public class Plocha {
         
         citacPlanu.close();
     }
+    
+    public void zasiahni(int x, int y) {
+        this.policka[y][x].zasiahni();
+    }
 }
