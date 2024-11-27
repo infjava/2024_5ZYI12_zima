@@ -24,4 +24,8 @@ public class Turnaj {
         
         this.uzavrety = false;
     }
+    
+    public void uzavriTurnaj() {
+        this.uzavrety = true;
+    }
 }
