@@ -8,7 +8,9 @@ public class ZoznamTimov {
     }
     
     public boolean pridajTim(Tim pridavany) {
-        // TODO kontroly
+        if (this.getTim(pridavany.getNazovTimu()) != null) {
+            return false;
+        }
         
         this.timy.add(pridavany);
         return true;
