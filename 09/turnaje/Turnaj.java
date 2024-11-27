@@ -28,4 +28,17 @@ public class Turnaj {
     public void uzavriTurnaj() {
         this.uzavrety = true;
     }
+    
+    public boolean vlozVysledokDoTabulky(Vysledok vysledok, int domaci, int hostia) {
+        if (this.uzavrety) {
+            return false;
+        }
+        
+        if (this.tabulka[domaci][hostia] != Vysledok.NEDOHRANE) {
+            return false;
+        }
+        
+        this.tabulka[domaci][hostia] = vysledok;
+        return true;
+    }
 }
