@@ -1,10 +1,12 @@
 import fri.shapesge.Manazer;
+import java.util.Random;
 
 public class Hra {
     private final Manazer manazer;
     private final CastVlaku vlak;
     private Smer smer;
     private boolean zvacsi;
+    private Random nahodneCisla;
     
     public Hra() {
         this.manazer = new Manazer();
@@ -18,12 +20,17 @@ public class Hra {
         
         this.zvacsi = false;
         
+        this.nahodneCisla = new Random();
+        
         this.manazer.spravujObjekt(this);
     }
     
     public void tik() {
         if (this.zvacsi) {
-            this.vlak.pripojCast(TypCastiVlaku.VAGON1);
+            TypCastiVlaku[] typyCasti = TypCastiVlaku.values();
+            int nahodnyIndex = this.nahodneCisla.nextInt(typyCasti.length - 1) + 1;
+            
+            this.vlak.pripojCast(typyCasti[nahodnyIndex]);
             
             this.zvacsi = false;
         }
