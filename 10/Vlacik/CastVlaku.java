@@ -26,14 +26,12 @@ public class CastVlaku {
         this.obrazok.zmenUhol(poloha.getSmer().getUhol());
     }
     
-    public void pripojCast(CastVlaku novaDalsiaCast) {
+    public void pripojCast(TypCastiVlaku typNovejCasti) {
         if (this.dalsiaCast == null) {
-            this.dalsiaCast = novaDalsiaCast;
-            this.dalsiaCast.setPoloha(
-                this.poloha.getPosunutaPoloha(-35, this.poloha.getSmer())
-            );
+            Poloha novaPoloha = this.poloha.getPosunutaPoloha(-35, this.poloha.getSmer());
+            this.dalsiaCast = new CastVlaku(novaPoloha, typNovejCasti);
         } else {
-            this.dalsiaCast.pripojCast(novaDalsiaCast);
+            this.dalsiaCast.pripojCast(typNovejCasti);
         }
     }
 }
