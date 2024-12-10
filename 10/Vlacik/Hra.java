@@ -57,4 +57,8 @@ public class Hra {
     public void aktivuj() {
         this.zvacsi = true;
     }
+    
+    public void zrus() {
+        System.exit(0);
+    }
 }
